@@ -32,3 +32,21 @@ var app4 = new Vue({
     ]
   }
 })
+// ユーザ入力の制御
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'test'
+  },
+  methods: {
+    reverseMessage: function() {
+      this.message = '本番だよん'
+    }
+  }
+})
+var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    message: 'Hello! Vue!!'
+  }
+})

@@ -32,6 +32,7 @@ var app4 = new Vue({
     ]
   }
 })
+
 // ユーザ入力の制御
 var app5 = new Vue({
   el: '#app-5',
@@ -50,3 +51,26 @@ var app6 = new Vue({
     message: 'Hello! Vue!!'
   }
 })
+
+// コンポーネントによる構成
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+
+Vue.component('test-component', {
+  template: '<div>コンポーネントテストです</div>'
+})
+
+new Vue({
+  el: '#app-7',
+  data: {
+    groceryList: [
+      { id: 0, text: 'Vegetables' },
+      { id: 1, text: 'Cheese' },
+      { id: 2, text: 'Whatever else humans are supposed to eat' }
+    ]
+  }
+})
+
+

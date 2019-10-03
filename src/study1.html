@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boilerplate with parcel</title>
+    <!-- vue.js 開発バージョン読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./javascripts/study1.js" defer></script>
+  </head>
+  <body>
+    
+    <h1>Sample</h1>
+    
+    <div id="app1">
+      {{ name }}
+      <ul>
+        <li v-for="item in list" :key="item.id" :class="{ tuyoi: item.hp > 300 }">
+          ID: {{ item.id }} {{ item.name }} HP.{{ item.hp }}
+          <span v-if="item.hp > 300">つよい！</span>
+        </li>
+      </ul>
+    </div>
+    
+  </body>
+</html>
